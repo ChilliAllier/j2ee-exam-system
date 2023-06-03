@@ -63,10 +63,10 @@
                             <div class="layui-card-header"><i class="fa fa-paper-plane-o icon"></i>系统介绍</div>
                             <div class="layui-card-body layui-text layadmin-text">
                                 <p>
-                                    在线考试系统采用功能强大、高效灵活的 SSM 架构和全 B/S 模式，具有高度的可扩展性，被授权的考试用户不管身处何地，
-                                    只要可以使用网络浏览器，就可通过网络登录在线考试系统，参加在线考试；该设计实现了按题型随机抽题组卷、在线考试、题库管理、系统管理，能够对客观题在线评分。
-                                    用户登录成功后，阅读考试须知，之后选择考试科目进入考试页面，完成相应科目考试，自动给出考试成绩。
-                                    系统管理，实现了对题库、考生信息、考试成绩、考试科目的管理。题库管理，实现了对试题的添加、编辑、删除功能；
+                                    四六级报名考试系统采用功能强大、高效灵活的基于 J2EE 的 SSM 架构和全 B/S 模式，具有高度的可扩展性，被授权的考试用户不管身处何地，
+                                    只要可以使用网络浏览器，就可通过网络登录四六级报名考试系统，参加在线考试；该设计实现了按题型随机抽题组卷、在线考试、题库管理、系统管理，能够对客观题自动评分。
+                                    用户登录成功后，阅读考试须知，之后选择考试等级进入考试页面，完成相应考试，自动给出考试成绩。
+                                    系统管理，实现了对题库、考生信息、考试成绩、考试等级的管理。题库管理，实现了对试题的添加、编辑、删除功能；
                                     成绩管理可以删除成绩信息。
                                 </p>
                             </div>
@@ -83,15 +83,15 @@
                                 <div class="welcome-module">
                                     <div class="layui-row layui-col-space10 layuimini-qiuck">
                                         <div class="layui-col-xs3 layuimini-qiuck-module">
-                                            <a href="javascript:;" layuimini-content-href="${pageContext.request.contextPath}/student/class_attended" data-title="我的班级" data-icon="fa fa-file-text">
+                                            <a href="javascript:;" layuimini-content-href="${pageContext.request.contextPath}/student/class_attended" data-title="我的考试等级" data-icon="fa fa-file-text">
                                                 <i class="fa fa-file-text"></i>
-                                                <cite>我的班级</cite>
+                                                <cite>我的考试等级</cite>
                                             </a>
                                         </div>
                                         <div class="layui-col-xs3 layuimini-qiuck-module">
                                             <a href="javascript:;" layuimini-content-href="${pageContext.request.contextPath}/student/student_exam" data-title="我的考试" data-icon="fa fa-database">
                                                 <i class="fa fa-database"></i>
-                                                <cite>我的考试 </cite>
+                                                <cite>我的考试</cite>
                                             </a>
                                         </div>
                                         <div class="layui-col-xs3 layuimini-qiuck-module">

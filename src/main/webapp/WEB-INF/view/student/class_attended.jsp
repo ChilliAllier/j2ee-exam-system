@@ -1,14 +1,14 @@
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
-  Date: 2021/5/14
+  Date: 2023/5/14
   Time: 15:21
   To change this template use File | Settings | File Templates.
 --%>
 <%--
   Created by IntelliJ IDEA.
-  User: He Guo
-  Date: 2021/5/7
+  User: Administrator
+  Date: 2023/5/7
   Time: 19:05
   To change this template use File | Settings | File Templates.
 --%>
@@ -29,7 +29,7 @@
     <div class="layuimini-main">
 
         <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-            <legend>查看你加入的班级</legend>
+            <legend>查看你报名的考试等级</legend>
         </fieldset>
 
         <script type="text/html" id="toolbarDemo">
@@ -72,10 +72,10 @@
             }],
             cols: [[
                 {type: "checkbox", width: 50},
-                {field: 'classcode', width: 95, title: '班级码'},
-                {field: 'classname', width: 200, title: '班级名', sort: true},
-                {field: 'classdesc', width: 400, title: '班级描述'},
-                {field: 'classcount', width: 400, title: '班级人数'},
+                {field: 'classcode', width: 95, title: '考试等级码'},
+                {field: 'classname', width: 200, title: '考试等级', sort: true},
+                {field: 'classdesc', width: 400, title: '考场'},
+                {field: 'classcount', width: 400, title: '考场人数'},
                 {title: '操作', minWidth: 150, toolbar: '#currentTableBar', align: "center"}
             ]],
             limits: [10, 15, 20, 25, 50, 100],
@@ -125,7 +125,7 @@
                     tmp_data.push(data[i].id);
                 }
                 console.log(data);
-                layer.confirm('真的要退出选中的这些班级吗？', function (index) {
+                layer.confirm('真的要取消报名的考试等级吗？', function (index) {
                     $.ajax({
                         type: "POST",
                         url: "${pageContext.request.contextPath}/classes/deleteClassMany/${sessionScope.student.id}",
@@ -166,7 +166,7 @@
         table.on('tool(currentTableFilter)', function (obj) {
             var data = obj.data;
          if (obj.event === 'delete') {
-                layer.confirm('该班级的相关的所有数据将会消失，真的要退出这个班级吗？', function (index) {
+                layer.confirm('该考试等级的相关的所有数据将会消失，真的要取消这个考试等级吗？', function (index) {
                     $.ajax({
                         type: "POST",
                         url: "${pageContext.request.contextPath}/classes/deleteClass_do/${sessionScope.student.id}",

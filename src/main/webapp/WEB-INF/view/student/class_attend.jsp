@@ -23,16 +23,16 @@
     <div class="layuimini-main">
 
         <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-            <legend>申请加入班级</legend>
+            <legend>申请报名考试等级</legend>
         </fieldset>
 
-        <h4 style="color: #0f6c8d;margin-left: 10px">输入要加入班级的编号，点击「查询」按钮，核实班级信息无误后点击「申请加入」按钮。</h4>
+        <h4 style="color: #0f6c8d;margin-left: 10px">输入要报名的考试等级的编号，点击「查询」按钮，核实考试等级信息无误后点击「申请报名」按钮。</h4>
 
         <div style="margin: 10px 10px 10px 10px" id="btn">
             <form class="layui-form layui-form-pane" onsubmit="show()" action="findClassInfo">
                 <div class="layui-form-item">
                     <div class="layui-inline">
-                        <label class="layui-form-label">班级编号</label>
+                        <label class="layui-form-label">考试等级编号</label>
                         <div class="layui-input-inline">
                             <!--注意此处input标签里的id-->
                             <input class="layui-input" name="classCode" value="${classInfo.classCode}" id="demoReload" autocomplete="off">
@@ -51,13 +51,13 @@
         <div class="classinfo" id="classinfo">
             <c:if test="${classInfo != null}">
                 <form action="joinClass">
-                    <h3 style="margin-top: 20px;margin-left: 10px">班级信息：</h3>
-                    <p style="margin-top: 10px;margin-left: 10px;font-size: 13.5px">班级编号：${classInfo.classCode}</p>
-                    <p style="margin-top: 10px;margin-left: 10px;font-size: 13.5px">班级名称：${classInfo.className}</p>
-                    <p style="margin-top: 10px;margin-left: 10px;font-size: 13.5px">班级信息：${classInfo.classDesc}</p>
-                    <p style="margin-top: 10px;margin-left: 10px;font-size: 13.5px">教师名称：${classInfo.username}</p>
+                    <h3 style="margin-top: 20px;margin-left: 10px">考试等级信息：</h3>
+                    <p style="margin-top: 10px;margin-left: 10px;font-size: 13.5px">考试等级编号：${classInfo.classCode}</p>
+                    <p style="margin-top: 10px;margin-left: 10px;font-size: 13.5px">考试等级名称：${classInfo.className}</p>
+                    <p style="margin-top: 10px;margin-left: 10px;font-size: 13.5px">考试等级信息：${classInfo.classDesc}</p>
+                    <p style="margin-top: 10px;margin-left: 10px;font-size: 13.5px">考场名称：${classInfo.username}</p>
                     <a style="margin-top: 10px;margin-left: 10px" href="${pageContext.request.contextPath}/student/joinclass?classId=${classInfo.classCode}"
-                       type="button" class="layui-btn layui-btn-primary" lay-filter="joinClass">加入班级</a>
+                       type="button" class="layui-btn layui-btn-primary" lay-filter="joinClass">申请报名考试等级</a>
                 </form>
             </c:if>
         </div>
