@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: He Guo
-  Date: 2021/5/7
-  Time: 19:05
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
 <head>
@@ -22,12 +16,12 @@
     <div class="layuimini-main">
 
         <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-            <legend>管理您的班级</legend>
+            <legend>管理考试等级</legend>
         </fieldset>
 
         <script type="text/html" id="toolbarDemo">
             <div class="layui-btn-container">
-                <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add"> 创建班级 </button>
+                <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add"> 创建考试等级 </button>
                 <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="delete"> 删除 </button>
             </div>
         </script>
@@ -69,9 +63,9 @@
             cols: [[
                 {type: "checkbox", width: 50},
                 {field: 'id', width: 80, title: '序号', type:'numbers'},
-                {field: 'classcode', width: 95, title: '班级码'},
-                {field: 'classname', width: 200, title: '班级名'},
-                {field: 'classdesc', width: 400, title: '班级描述'},
+                {field: 'classcode', width: 95, title: '考试等级码'},
+                {field: 'classname', width: 200, title: '考试名'},
+                {field: 'classdesc', width: 400, title: '考试等级描述'},
                 {title: '操作', minWidth: 150, toolbar: '#currentTableBar', align: "center"}
             ]],
             limits: [10, 15, 20, 25, 50, 100],
@@ -106,7 +100,7 @@
         table.on('toolbar(currentTableFilter)', function (obj) {
             if (obj.event === 'add') {  // 监听添加操作
                 var index = layer.open({
-                    title: '创建班级',
+                    title: '创建考试等级',
                     type: 2,
                     shade: 0.2,
                     maxmin:true,
@@ -126,7 +120,7 @@
                     tmp_data.push(data[i].id);
                 }
                 console.log(data);
-                layer.confirm('该班级的相关的所有数据将会消失，真的要删除选中的班级吗？', function (index) {
+                layer.confirm('该考试等级的相关的所有数据将会消失，真的要删除选中的考试等级吗？', function (index) {
                     $.ajax({
                         type: "POST",
                         url: "${pageContext.request.contextPath}/classes/classManager_delMany",

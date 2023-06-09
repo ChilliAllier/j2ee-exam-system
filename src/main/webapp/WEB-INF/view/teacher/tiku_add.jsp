@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: He Guo
-  Date: 2021/5/8
-  Time: 22:52
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
@@ -23,7 +17,7 @@
                     1. 手动录入题目到题库 <br>
                     2. 通过 excel 表格的方式导入题目到题库
                 </p>
-                <p>必须选择一个班级才能导入</p>
+                <p>必须选择一个考试等级才能导入</p>
             </blockquote>
         </c:if>
         <fieldset class="table-search-fieldset" style="margin-top: 20px;">
@@ -38,10 +32,10 @@
             <form class="layui-form layui-form-pane" action="" lay-filter="example">
                 <input type="hidden" name="id" value="${question.id}" />
                 <div class="layui-form-item layui-form-text">
-                    <label class="layui-form-label">选择导入的班级</label>
+                    <label class="layui-form-label">选择导入的考试等级</label>
                     <div class="layui-input-block">
                         <select name="classId" id="classId" lay-verify="required" lay-search="">
-                            <option value="">选择你的班级</option>
+                            <option value="">选择考试等级</option>
                             <c:forEach var="cls" items="${data}">
                                 <c:choose>
                                     <c:when test="${cls.id == question.belongclass}">

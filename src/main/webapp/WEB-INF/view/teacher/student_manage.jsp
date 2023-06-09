@@ -1,11 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: He Guo
-  Date: 2021/5/8
-  Time: 15:58
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
 <head>
@@ -27,19 +21,19 @@
         </fieldset>
 
         <blockquote class="layui-elem-quote layui-text">
-            你需要选择一个班级来查看你的班级中的学生
+            你需要选择一个考试等级来查看考试等级中的学生
         </blockquote>
 
         <fieldset class="table-search-fieldset">
-            <legend>选择一个班级</legend>
+            <legend>选择一个考试等级</legend>
             <div style="margin: 10px 10px 10px 10px">
                 <form class="layui-form layui-form-pane" action="">
                     <div class="layui-form-item">
                         <div class="layui-inline">
-                            <label class="layui-form-label">班级</label>
+                            <label class="layui-form-label">考试等级</label>
                             <div class="layui-input-inline">
                                 <select name="classId" lay-verify="required" lay-search="">
-                                    <option value="">选择你的班级</option>
+                                    <option value="">选择考试等级</option>
                                     <c:forEach var="cls" items="${data}">
                                         <option value="${cls.id}">${cls.classcode} - ${cls.classname}</option>
                                     </c:forEach>
@@ -81,7 +75,7 @@
             url: '${pageContext.request.contextPath}/static/backend/api/empty.json',
             toolbar: '#toolbarDemo',
             text: {
-                none: '请在选择框中选择你的班级查找班级中所在的学生' // 默认：无数据。注：该属性为 layui 2.2.5 开始新增
+                none: '请在选择框中选择考试等级查找考试等级中所在的学生' // 默认：无数据。注：该属性为 layui 2.2.5 开始新增
             },
             parseData: function(res){ //res 即为原始返回的数据
                 return {
@@ -150,7 +144,7 @@
                     tmp_data.push(data[i].id);
                 }
                 console.log(data);
-                layer.confirm('真的要将选中的学生踢出班级吗？', function (index) {
+                layer.confirm('真的要将选中的学生取消考试资格吗？', function (index) {
                     $.ajax({
                         type: "POST",
                         url: "${pageContext.request.contextPath}/classes/kickOutMany",
@@ -198,7 +192,7 @@
             if (obj.event === 'edit') {
 
                 var index = layer.open({
-                    title: '修改班级信息',
+                    title: '修改考试等级信息',
                     type: 2,
                     shade: 0.2,
                     maxmin:true,
@@ -212,7 +206,7 @@
                 return false;
             } else if (obj.event === 'kickOut') {
                 console.log(data);
-                layer.confirm('真的要将选中的学生踢出班级吗？', function (index) {
+                layer.confirm('真的要将选中的学生取消考试资格吗？', function (index) {
                     $.ajax({
                         type: "POST",
                         url: "${pageContext.request.contextPath}/classes/kickOut",

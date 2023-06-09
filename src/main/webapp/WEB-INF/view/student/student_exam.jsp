@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2021/5/31
-  Time: 21:48
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
@@ -41,10 +35,10 @@
                 <form class="layui-form layui-form-pane" action="">
                     <div class="layui-form-item">
                         <div class="layui-inline">
-                            <label class="layui-form-label">班级</label>
+                            <label class="layui-form-label">考试等级</label>
                             <div class="layui-input-inline">
                                 <select name="classId" lay-filter="selectClassId" lay-verify="required" lay-search="">
-                                    <option value="">选择你的班级</option>
+                                    <option value="">选择你的考试等级</option>
                                     <c:forEach items="${list}" var="temp">
 
                                 </c:forEach>
@@ -108,7 +102,7 @@
                 };
             },
             text: {
-                none: "请选择一个班级，参与考试"
+                none: "请选择一个考试等级，参与考试"
             },
             cols: [[
                 {field: 'id', width: 60, title: '序号', type:'numbers'},

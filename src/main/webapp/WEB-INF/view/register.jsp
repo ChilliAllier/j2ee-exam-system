@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: He Guo
-  Date: 2021/4/11
-  Time: 13:54
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
@@ -31,7 +25,7 @@
         }
 
         body {
-            background: #1E9FFF;
+            background: #EEAD0E;
         }
 
         body:after {
@@ -190,8 +184,8 @@
         // 粒子线条背景
         $(document).ready(function () {
             $('.layui-container').particleground({
-                dotColor: '#7ec7fd',
-                lineColor: '#7ec7fd'
+                dotColor: '#EEAD0E',
+                lineColor: '#EEAD0E'
             });
         });
 

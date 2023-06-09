@@ -1,11 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: He Guo
-  Date: 2021/5/8
-  Time: 15:59
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
 <head>
@@ -27,7 +21,7 @@
         </fieldset>
 
         <blockquote class="layui-elem-quote layui-text">
-            你需要选择一个班级来管理你所在的班级中的试卷、创建试卷。
+            你需要选择一个考试等级来管理考试等级中的试卷、创建试卷。
             考试状态分为4类：
             <ol style="margin: 10px 0 0 25px;">
                 <li style="list-style: initial;"><span style="color: gray">未开始</span> -- 考试还没有开始</li>
@@ -38,15 +32,15 @@
         </blockquote>
 
         <fieldset class="table-search-fieldset">
-            <legend>选择一个班级</legend>
+            <legend>选择一个考试等级</legend>
             <div style="margin: 10px 10px 10px 10px">
                 <form class="layui-form layui-form-pane" action="">
                     <div class="layui-form-item">
                         <div class="layui-inline">
-                            <label class="layui-form-label">班级</label>
+                            <label class="layui-form-label">考试等级</label>
                             <div class="layui-input-inline">
                                 <select name="classId" lay-filter="selectClassId" lay-verify="required" lay-search="">
-                                    <option value="">选择你的班级</option>
+                                    <option value="">选择考试等级</option>
                                     <c:forEach var="cls" items="${data}">
                                         <option value="${cls.id}">${cls.classcode} - ${cls.classname}</option>
                                     </c:forEach>
@@ -111,7 +105,7 @@
                 };
             },
             text: {
-                none: "选择一个班级，管理你的考试"
+                none: "选择一个考试等级，管理你的考试"
             },
             cols: [[
                 {type: "checkbox", width: 50},
@@ -253,7 +247,7 @@
                     });
                 }
             } else {
-                layer.msg("你未选择班级，请在上面的选择栏中选一个班级创建试卷", {icon: 2});
+                layer.msg("你未选择考试等级，请在上面的选择栏中选一个考试等级创建试卷", {icon: 2});
             }
         });
 

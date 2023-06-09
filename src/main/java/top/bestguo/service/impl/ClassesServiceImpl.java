@@ -60,10 +60,10 @@ public class ClassesServiceImpl implements ClassesService {
         int res = classesMapper.insert(classes);
         if(res > 0) {
             result.setCode(0);
-            result.setMessage("班级创建成功");
+            result.setMessage("考试等级创建成功");
         } else {
             result.setCode(1);
-            result.setMessage("班级创建失败");
+            result.setMessage("考试等级创建失败");
         }
         return result;
     }
@@ -81,10 +81,10 @@ public class ClassesServiceImpl implements ClassesService {
         int res = classesMapper.updateById(classes);
         if(res > 0) {
             result.setCode(0);
-            result.setMessage("班级修改成功");
+            result.setMessage("考试等级修改成功");
         } else {
             result.setCode(1);
-            result.setMessage("班级修改失败");
+            result.setMessage("考试等级修改失败");
         }
         return result;
     }
@@ -107,10 +107,10 @@ public class ClassesServiceImpl implements ClassesService {
         int res = classesMapper.delete(wrapper);
         if(res > 0) {
             result.setCode(0);
-            result.setMessage("班级删除成功");
+            result.setMessage("考试等级删除成功");
         } else {
             result.setCode(1);
-            result.setMessage("班级删除失败");
+            result.setMessage("考试等级删除失败");
         }
         return result;
     }
@@ -133,10 +133,10 @@ public class ClassesServiceImpl implements ClassesService {
         int res = classesMapper.delete(wrapper);
         if(res > 0) {
             result.setCode(0);
-            result.setMessage("删除多个班级成功");
+            result.setMessage("删除多个考试等级成功");
         } else {
             result.setCode(1);
-            result.setMessage("删除多个班级失败");
+            result.setMessage("删除多个考试等级失败");
         }
         return result;
     }
@@ -240,7 +240,7 @@ public class ClassesServiceImpl implements ClassesService {
             result.setMessage("踢出学生成功");
         } else {
             result.setCode(1);
-            result.setMessage("踢出学生失败，该学生不在班级中");
+            result.setMessage("踢出学生失败，该学生不在考试等级中");
         }
 
         return result;
@@ -267,7 +267,7 @@ public class ClassesServiceImpl implements ClassesService {
             result.setMessage("踢出多个学生成功");
         } else {
             result.setCode(1);
-            result.setMessage("踢出多个学生失败，该学生不在班级中");
+            result.setMessage("踢出多个学生失败，该学生不在考试等级中");
         }
 
         return result;
@@ -357,7 +357,7 @@ public class ClassesServiceImpl implements ClassesService {
             result.setMessage("学生退出成功");
         } else {
             result.setCode(1);
-            result.setMessage("学生退出失败，该学生不在班级中");
+            result.setMessage("学生退出失败，该学生不在考试等级中");
         }
 
         return result;
@@ -387,7 +387,7 @@ public class ClassesServiceImpl implements ClassesService {
             result.setMessage("学生退出成功");
         } else {
             result.setCode(1);
-            result.setMessage("学生退出失败，该学生不在班级中");
+            result.setMessage("学生退出失败，该学生不在考试等级中");
         }
 
         return result;

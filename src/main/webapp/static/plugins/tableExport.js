@@ -5,7 +5,7 @@
  *
  * Copyright (c) 2015-2021 hhurz, https://github.com/hhurz/tableExport.jquery.plugin
  *
- * Based on https://github.com/kayalshri/tableExport.jquery.plugin
+ * Based on https://github.com/kayalshri/tableExport.jquery.plugin logo
  *
  * Licensed under the MIT License
  **/

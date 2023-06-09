@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: He Guo
-  Date: 2021/4/11
-  Time: 13:54
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
@@ -59,6 +53,7 @@
                 <div class="layui-form-item">
                     <input type="radio" name="type"  checked="checked" value="1" lay-skin="primary" title="学生">
                     <input type="radio" name="type"  value="2" lay-skin="primary" title="老师">
+                    <input type="radio" name="type"  value="3" lay-skin="primary" title="管理员">
 
                 </div>
                 <div class="layui-form-item">
