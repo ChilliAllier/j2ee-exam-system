@@ -22,14 +22,18 @@
         <script type="text/html" id="toolbarDemo">
             <div class="layui-btn-container">
                 <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="delete"> 退出 </button>
+                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="pay"> 缴费 </button>
             </div>
         </script>
+
 
         <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
 
         <script type="text/html" id="currentTableBar">
             <a class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn"  lay-event="delete">退出</a>
+            <a class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn"  lay-event="pay">缴费</a>
         </script>
+
     </div>
 </div>
 <jsp:include page="../commons/scripts.jsp" />
@@ -102,6 +106,8 @@
             console.log(obj)
         });
         table.on('toolbar(currentTableFilter)', function (obj) {
+         if (obj.event === 'pay') {
+            layer.confirm('真的要缴费吗？', function (index) {});}
             if (obj.event === 'delete') {  // 监听删除操作
                 var checkStatus = table.checkStatus('currentTableId')
                     , data = checkStatus.data;

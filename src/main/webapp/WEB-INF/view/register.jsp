@@ -154,6 +154,7 @@
                 <div class="layui-form-item">
                     <input type="radio" name="type" checked="checked" value="1" lay-skin="primary" title="学生">
                     <input type="radio" name="type" value="2" lay-skin="primary" title="老师">
+                    <input type="radio" name="type" value="3" lay-skin="primary" title="管理员">
 
                 </div>
                 <div class="layui-form-item">
