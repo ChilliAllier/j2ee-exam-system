@@ -88,7 +88,7 @@
                                             </a>
                                         </div>
                                         <div class="layui-col-xs3 layuimini-qiuck-module">
-                                            <a href="javascript:;" layuimini-content-href="${pageContext.request.contextPath}/teacher/classManage" data-title="班级管理" data-icon="fa fa-braille">
+                                            <a href="javascript:;" layuimini-content-href="${pageContext.request.contextPath}/teacher/classManage" data-title="考试等级管理" data-icon="fa fa-braille">
                                                 <i class="fa fa-braille"></i>
                                                 <cite>考试等级管理</cite>
                                             </a>

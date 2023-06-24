@@ -22,7 +22,7 @@
           "target": "_self"
         },
         {
-          "title": "班级管理",
+          "title": "考试等级管理",
           "href": "/ssm_online_exam/teacher/classManage",
           "icon": "fa fa-braille",
           "target": "_self"
